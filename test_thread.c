@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   thread.c                                           :+:      :+:    :+:   */
+/*   test_thread.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: groubaud <groubaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 08:57:36 by groubaud          #+#    #+#             */
-/*   Updated: 2022/07/28 11:31:34 by groubaud         ###   ########.fr       */
+/*   Updated: 2022/07/28 11:59:48 by groubaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // gcc -lpthread -D_REENTRANT
-#include "h_thread.h"
+#include "test_h_thread.h"
 
 //int pthread_create (pthread_t * thread, pthread_attr_t * attr, void * (* start_routine) (void *), void * arg);
 
