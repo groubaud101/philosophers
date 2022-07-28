@@ -6,7 +6,7 @@
 /*   By: groubaud <groubaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 12:06:10 by groubaud          #+#    #+#             */
-/*   Updated: 2022/07/28 12:56:19 by groubaud         ###   ########.fr       */
+/*   Updated: 2022/07/28 13:49:56 by groubaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdio.h>
+# include <stdlib.h>
 # include <pthread.h>
 
 // number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
@@ -22,7 +23,10 @@
 typedef struct	s_philo
 {
 	int			num_philo;
-	int			fork;
+	pthread_t	thread_fork;
+	pthread_t	thread_philo;
+	pthread_cond_t	free_fork;
+	
 }t_philo;
 
 typedef struct s_master
