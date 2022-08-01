@@ -6,7 +6,7 @@
 /*   By: groubaud <groubaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 12:06:10 by groubaud          #+#    #+#             */
-/*   Updated: 2022/07/28 13:49:56 by groubaud         ###   ########.fr       */
+/*   Updated: 2022/08/01 10:53:36 by groubaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@
 typedef struct	s_philo
 {
 	int			num_philo;
-	pthread_t	thread_fork;
+	int			left_fork;
+	int			right_fork;
 	pthread_t	thread_philo;
-	pthread_cond_t	free_fork;
-	
 }t_philo;
 
 typedef struct s_master
@@ -37,6 +36,7 @@ typedef struct s_master
 	int		time_to_sleep;
 	int		number_of_eating;
 	t_philo	*philo;
+	pthread_mutex_t	*forks;
 }t_master;
 
 /* ft_lib.c */
